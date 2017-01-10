@@ -44,40 +44,5 @@ public class Main {
 
 		// TODO napraviti osvjezavanje slike bez ponovnog uspostavljanja http
 		// veze
-
-		int x;
-		int y;
-		while (true) {
-			try {
-				streamGetter = new StreamGetter(jpgURL, userName, password);
-				sti = new StreamToImage(new DataInputStream(new BufferedInputStream(streamGetter.getInputStream())));
-				image = sti.getImage();
-				blueColorDetect = new BlueColorDetect(image);
-				streamGetter.disconnect();
-				if (blueColorDetect.getPressedKey() == 27) {
-					break;
-				}
-
-				System.out.println("iw="+ image.getWidth()+" ih="+image.getHeight());
-				
-				x = (int) (blueColorDetect.getPositionVector().getX() / 4.0 * (double) image.getWidth())
-						+ image.getWidth() / 2;
-				y = (int) (blueColorDetect.getPositionVector().getY() / 4.0 * (double) image.getHeight())
-						+ image.getHeight()/2;
-
-				System.out.println("x="+x+" y="+y);
-				
-				cameraController.cameraCommand("center=" + x + "," + y + "&imagewidth="+image.getWidth()+"&mageheight="+image.getHeight());
-
-			} catch (ImageFormatException e) {
-				e.printStackTrace();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-
-		}
-		
-		streamGetter.disconnect();
-		blueColorDetect.dispose();
 	}
 }
