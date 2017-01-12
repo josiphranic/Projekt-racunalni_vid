@@ -129,4 +129,31 @@ public class CameraController {
 		cameraCommand("speed=" + speed);
 	}
 
+	public void moveUp() throws IOException {
+		cameraCommand("move=up");
+	}
+
+	public void moveDown() throws IOException {
+		cameraCommand("move=down");
+	}
+
+	public void moveLeft() throws IOException {
+		cameraCommand("move=left");
+	}
+
+	public void moveRight() throws IOException {
+		cameraCommand("move=right");
+	}
+
+	/**
+	 * Mijenja zoom relativno s obzirom na trenutni zoom.
+	 * 
+	 * @param zoom
+	 *            Povećanje/smanjenje zooma s obzirom na trenutni. [-9999, 9999]
+	 * @throws IOException
+	 */
+	public void changeZoomRelatively(int zoom) throws IOException {
+		cameraCommand("rzoom=" + zoom);
+	}
+
 }
