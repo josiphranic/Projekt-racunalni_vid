@@ -20,8 +20,8 @@
       <TextField fx:id="urlTextField" layoutX="103.0" layoutY="18.0" minWidth="450.0" prefHeight="25.0" prefWidth="483.0" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="18.0" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Camera URL: " AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="22.0" />
       <ChoiceBox fx:id="objectChoiceBox" layoutX="110.0" layoutY="534.0" prefWidth="150.0" AnchorPane.bottomAnchor="41.0" AnchorPane.leftAnchor="110.0" />
-      <ImageView fitHeight="440.0" fitWidth="550.0" layoutX="50.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
+      <ImageView fx:id="imageView" fitHeight="440.0" fitWidth="550.0" layoutX="50.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="390.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0" />
       <Text layoutX="28.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Identify object: " AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="20.0" />
-      <Slider fx:id="zoomSlider" layoutX="579.0" layoutY="60.0" orientation="VERTICAL" prefHeight="440.0" prefWidth="14.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="60.0" />
+      <Slider fx:id="zoomSlider" layoutX="579.0" layoutY="60.0" max="9999.0" min="1.0" onMouseReleased="#handleZoom" orientation="VERTICAL" prefHeight="440.0" prefWidth="14.0" value="1.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="60.0" />
    </children>
 </AnchorPane>

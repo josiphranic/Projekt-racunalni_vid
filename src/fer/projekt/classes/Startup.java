@@ -7,14 +7,14 @@ import java.io.IOException;
 
 import com.sun.image.codec.jpeg.ImageFormatException;
 
-public class Main {
+public class Startup {
 
 	private static String jpgURL = "http://169.254.12.213/axis-cgi/jpg/image.cgi?resolution=4CIF";
 	private static String someJpgURL = "http://201.166.63.44/axis-cgi/jpg/image.cgi?resolution=SIF";
 	private static String userName = "root";
 	private static String password = "root";
 
-	public static void main(String[] args) {
+	public static void start() {
 		StreamGetter streamGetter = null;
 		StreamToImage sti = null;
 		BufferedImage image = null;
